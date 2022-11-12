@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+
+    <body background="backgorund.jpg">
+        <center>
+            <div>
+                <h1>My Family Book</h1>
+                <img id="Start_Pic" style = "width: 400px;" src ="Family.jpg">
+                <h4 id="family_member_name"></h4>
+                <br>
+                <br>
+                <label id="Name_Display"></label>
+                <br>
+                <br>
+                <button id="Button" onclick="update()">Next</button>
+            </div> 
+        </center>
+
+
+    <script>
+        var names=["My Family","Piku","Pranavi Raikwar","Aryan S Raikwar","Suchitra Raikwar","Suryakant Raikwar"];
+        
+        var images=["https://i.postimg.cc/MKdhy06Z/family.jpg","My_Piku.jpeg","My_Sis.jpeg","Me_2.jpeg","My_Mom.jpeg","My_Dad.jpeg"];
+        
+        var i=0;
+        function update()
+        {
+             if (i > 6)
+             {
+                i = 0;
+             }
+             var Updated_image = images [i];
+             var Updated_name = names [i];
+             document.getElementById("Start_Pic").src = Updated_image;
+             document.getElementById("Name_Display").innerHTML = Updated_name;
+             i++;
+            }
+
+
+    </script>
+    </body>
+</html>
